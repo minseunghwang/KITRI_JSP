@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script>
+
+	function add(x,y){
+		return x+y;
+	}
+	function min(x,y){
+		return x-y;
+	}
+	function mul(x,y){
+		return x*y;
+	}
+	function div(x,y){
+		return x/y;
+	}
+	
+</script>
+</head>
+<body>
+
+<script>
+	var a = prompt("정수를 입력하시오", "0");
+	var b = prompt("정수를 입력하시오", "0");
+	var c = prompt("연산자를 입력하시오", "+");
+	
+	var a_int = parseInt(a);
+	var b_int = parseInt(b);
+	var result = 0;
+	switch(c){
+	case "+":
+		result = add(a_int, b_int);
+		break;
+	case "-":
+		result = sub(a_int, b_int);
+		break;
+	case "*":
+		result = mul(a_int, b_int);
+		break;
+	case "/":
+		result = div(a_int, b_int);
+		break;
+	}
+	
+	document.write("result = " + result);
+</script>
+
+
+</body>
+</html>

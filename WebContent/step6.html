@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+
+<script type="text/javascript">
+	function checkAge() {
+		var age = document.ageForm.age;
+		
+		// 숫자인지 확인
+		var flag = window.isNaN(age.value);
+		
+		// 숫자가 아니라면 true 반환.
+		if(flag){
+			alert("숫자를 넣으세요.");
+			age.value="";
+			age.focus();
+			return ;		// 함수 중단
+		}
+		if(age.value >= 18){
+			alert("성인 입장 가능");
+		} else{
+			alert("미성년자 ㅃㅇ");
+		}
+		age.value="";
+		age.focus();
+	}
+</script>
+
+</head>
+<body>
+
+<form name="ageForm">
+나이 : <input type="text" name="age">
+<input type="submit" value="나이체크" onclick="checkAge()">
+</form>
+
+</body>
+</html>

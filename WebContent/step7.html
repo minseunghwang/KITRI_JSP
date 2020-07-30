@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+
+<script type="text/javascript">
+	function moneyCheck() {
+		var money = document.bankform.money;
+		
+		var flag = window.isNaN(money.value);
+		
+		if(flag){
+			alert("숫자로만 된 금액을 입력하세요.");
+			money.value="";
+			money.focus();
+			return ;
+		}
+		if(money.value > 0){
+			alert(money.value + "원 입금완료.");
+		} else{
+			alert("0원 초과 금액 입력.");
+		}
+		money.value="";
+		money.focus();
+	}
+</script>
+
+</head>
+<body>
+
+<form name="bankform">
+입금액 : <input type="text" name="money">
+<input type="submit" value="입금" onclick="moneyCheck()">
+</form>
+<hr>
+
+</body>
+</html>
